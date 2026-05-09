@@ -370,12 +370,25 @@ body {
 
 .contribution-list {
   margin: 0;
-  padding-left: 1.5rem;
-  list-style: disc;
-  list-style-position: outside;
+  padding-left: 0;
+  list-style: none;
   color: var(--text-secondary);
   font-size: 1.05rem;
   line-height: 1.85;
+}
+
+.contribution-list li {
+  position: relative;
+  padding-left: 1.35rem;
+}
+
+.contribution-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--text-primary);
+  font-weight: 700;
 }
 
 .contribution-list li + li {
