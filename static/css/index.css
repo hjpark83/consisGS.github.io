@@ -358,6 +358,28 @@ body {
   margin-bottom: 1.25rem !important;
 }
 
+.contribution-subtitle {
+  margin-top: 2.75rem !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.contribution-block {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contribution-list {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+.contribution-list li + li {
+  margin-top: 0.85rem;
+}
+
 /* Content Improvements */
 .content.has-text-justified {
   font-size: 1.1rem;
