@@ -353,6 +353,11 @@ body {
   border-radius: 2px;
 }
 
+.result-subtitle {
+  margin-top: 2.5rem !important;
+  margin-bottom: 1.25rem !important;
+}
+
 /* Content Improvements */
 .content.has-text-justified {
   font-size: 1.1rem;
