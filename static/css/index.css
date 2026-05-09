@@ -169,14 +169,14 @@ body {
 .publication-conference {
     display: inline-flex;
     align-items: center;
-    padding: 0.45rem 0.9rem;
+    padding: 0.55rem 1.1rem;
     border-radius: 999px;
     background: linear-gradient(135deg, #eff6ff, #dbeafe);
     color: var(--primary-hover);
     border: 1px solid #bfdbfe;
-    font-size: 0.95rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
+    font-size: 1.08rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
     box-shadow: var(--shadow-sm);
 }
 
@@ -653,7 +653,7 @@ code {
   }
 
   .publication-conference {
-    font-size: 0.875rem;
+    font-size: 0.98rem;
   }
   
   .button {
