@@ -366,21 +366,24 @@
           <img src="asset/pipeline.png" alt="Pipeline overview" loading="lazy"/>
         </figure>
         <p class="subtitle has-text-centered">
-          Pipeline description goes here.
+          Given multiview images, we extract initial SAM masks and multi-cue priors. 
+          These masks are refined via MCM using a composite merge score. 
+          Following cross-view mask matching, refined 2D features are backprojected and lifted into 3D Gaussians. 
+          Consequently, the model outputs a view-consistent object-level feature field for high-fidelity 3D scene understanding.
         </p>
 
         <figure class="image mb-6">
-          <img src="asset/Qualitative%20results.png" alt="Qualitative results" loading="lazy"/>
+          <img src="asset/Qualitative_results.png" alt="Qualitative results" loading="lazy"/>
         </figure>
         <p class="subtitle has-text-centered">
-          Qualitative results description goes here.
+          This figure demonstrates how faithfully our refinement results represent the scene and maintain view consistency across different viewpoints.
         </p>
 
         <figure class="image mb-6">
-          <img src="asset/View%20consistency.png" alt="View consistency results" loading="lazy"/>
+          <img src="asset/View_consistency.png" alt="View consistency results" loading="lazy"/>
         </figure>
         <p class="subtitle has-text-centered">
-          View consistency description goes here.
+          Compared to GaussianGrouping, which exhibits over-segmentation and inconsistent object identities across different views, our approach successfully produces coherent, view-consistent object masks across changing viewpoints.
         </p>
       </div>
     </div>
