@@ -130,6 +130,8 @@ function setupComparisonSliders() {
     sliders.forEach((slider) => {
         const slides = Array.from(slider.querySelectorAll('.comparison-slide'));
         const dotsContainer = slider.querySelector('.comparison-slider-dots');
+        const prevButton = slider.querySelector('.comparison-arrow-prev');
+        const nextButton = slider.querySelector('.comparison-arrow-next');
         const autoplayMs = Number(slider.dataset.autoplayMs || 4500);
 
         if (slides.length === 0 || !dotsContainer) return;
@@ -170,6 +172,11 @@ function setupComparisonSliders() {
             updateSlides();
         }
 
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlides();
+        }
+
         function startAutoplay() {
             if (slides.length <= 1) return;
             intervalId = window.setInterval(nextSlide, autoplayMs);
@@ -190,6 +197,20 @@ function setupComparisonSliders() {
         renderDots();
         updateSlides();
         startAutoplay();
+
+        if (prevButton) {
+            prevButton.addEventListener('click', () => {
+                prevSlide();
+                restartAutoplay();
+            });
+        }
+
+        if (nextButton) {
+            nextButton.addEventListener('click', () => {
+                nextSlide();
+                restartAutoplay();
+            });
+        }
 
         slider.addEventListener('mouseenter', stopAutoplay);
         slider.addEventListener('mouseleave', startAutoplay);
