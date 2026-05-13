@@ -358,6 +358,125 @@ body {
   margin-bottom: 1.25rem !important;
 }
 
+.qualitative-slider {
+  margin: 2.5rem auto 0;
+  max-width: 1120px;
+}
+
+.hero-preview-slider {
+  margin-top: 2.75rem;
+}
+
+.comparison-slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.comparison-slider-title {
+  margin-bottom: 0 !important;
+}
+
+.comparison-slider-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.comparison-slider-dots button {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #cbd5e1;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.comparison-slider-dots button.is-active {
+  background: var(--text-primary);
+  transform: scale(1.15);
+}
+
+.comparison-slider-viewport {
+  position: relative;
+  min-height: 360px;
+}
+
+.comparison-slide {
+  display: none;
+  position: relative;
+  padding: 3rem 1.25rem 1.25rem;
+  border-radius: var(--border-radius-lg);
+  background: #fff;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+.comparison-slide.is-active {
+  display: block;
+}
+
+.comparison-dataset {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: var(--background-accent);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.comparison-panel {
+  margin: 0;
+  padding: 0.85rem;
+  border-radius: var(--border-radius);
+  background: var(--background-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.comparison-panel figcaption {
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.comparison-panel img {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+}
+
+.comparison-placeholder div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  border: 1.5px dashed #cbd5e1;
+  border-radius: 10px;
+  color: var(--text-light);
+  font-weight: 600;
+  background: linear-gradient(180deg, #fff, #f8fafc);
+}
+
 .contribution-subtitle {
   margin-top: 2.75rem !important;
   margin-bottom: 1.25rem !important;
@@ -730,6 +849,23 @@ code {
   
   .teaser .hero-body {
     padding: 1rem;
+  }
+
+  .comparison-slider-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-slide {
+    padding: 3rem 0.9rem 0.9rem;
+  }
+
+  .comparison-placeholder div {
+    min-height: 180px;
   }
   
   .content.has-text-justified {

@@ -4,6 +4,8 @@ window.HELP_IMPROVE_VIDEOJS = false;
 function toggleMoreWorks() {
     const dropdown = document.getElementById('moreWorksDropdown');
     const button = document.querySelector('.more-works-btn');
+
+    if (!dropdown || !button) return;
     
     if (dropdown.classList.contains('show')) {
         dropdown.classList.remove('show');
@@ -19,6 +21,8 @@ document.addEventListener('click', function(event) {
     const container = document.querySelector('.more-works-container');
     const dropdown = document.getElementById('moreWorksDropdown');
     const button = document.querySelector('.more-works-btn');
+
+    if (!container || !dropdown || !button) return;
     
     if (container && !container.contains(event.target)) {
         dropdown.classList.remove('show');
@@ -31,6 +35,7 @@ document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         const dropdown = document.getElementById('moreWorksDropdown');
         const button = document.querySelector('.more-works-btn');
+        if (!dropdown || !button) return;
         dropdown.classList.remove('show');
         button.classList.remove('active');
     }
@@ -119,6 +124,78 @@ function setupVideoCarouselAutoplay() {
     });
 }
 
+function setupComparisonSliders() {
+    const sliders = document.querySelectorAll('.comparison-slider');
+
+    sliders.forEach((slider) => {
+        const slides = Array.from(slider.querySelectorAll('.comparison-slide'));
+        const dotsContainer = slider.querySelector('.comparison-slider-dots');
+        const autoplayMs = Number(slider.dataset.autoplayMs || 4500);
+
+        if (slides.length === 0 || !dotsContainer) return;
+
+        let currentIndex = 0;
+        let intervalId = null;
+
+        function renderDots() {
+            dotsContainer.innerHTML = '';
+            slides.forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.type = 'button';
+                dot.setAttribute('aria-label', `Show slide ${index + 1}`);
+                if (index === currentIndex) {
+                    dot.classList.add('is-active');
+                }
+                dot.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateSlides();
+                    restartAutoplay();
+                });
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        function updateSlides() {
+            slides.forEach((slide, index) => {
+                slide.classList.toggle('is-active', index === currentIndex);
+            });
+
+            Array.from(dotsContainer.children).forEach((dot, index) => {
+                dot.classList.toggle('is-active', index === currentIndex);
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlides();
+        }
+
+        function startAutoplay() {
+            if (slides.length <= 1) return;
+            intervalId = window.setInterval(nextSlide, autoplayMs);
+        }
+
+        function stopAutoplay() {
+            if (intervalId !== null) {
+                window.clearInterval(intervalId);
+                intervalId = null;
+            }
+        }
+
+        function restartAutoplay() {
+            stopAutoplay();
+            startAutoplay();
+        }
+
+        renderDots();
+        updateSlides();
+        startAutoplay();
+
+        slider.addEventListener('mouseenter', stopAutoplay);
+        slider.addEventListener('mouseleave', startAutoplay);
+    });
+}
+
 $(document).ready(function() {
     // Check for click events on the navbar burger icon
 
@@ -138,5 +215,8 @@ $(document).ready(function() {
     
     // Setup video autoplay for carousel
     setupVideoCarouselAutoplay();
+
+    // Setup qualitative comparison sliders
+    setupComparisonSliders();
 
 })
