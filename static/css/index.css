@@ -163,15 +163,24 @@ body {
 
 .publication-institution {
     color: var(--text-secondary);
-    font-weight: 600;
+    font-size: 1.14rem;
+    font-weight: 700;
     letter-spacing: 0.02em;
 }
 
 .publication-conference {
-    color: var(--text-primary);
-    font-size: 1.12rem;
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(90deg, #d62839 0%, #ef5b68 34%, #3558c8 72%, #1f4aa8 100%);
+    color: #d62839;
+    font-size: 1.5rem;
     font-weight: 800;
     letter-spacing: 0.02em;
+    line-height: 1.2;
+    text-decoration: none !important;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .publication-venue {
@@ -813,8 +822,12 @@ code {
     margin-bottom: 1.25rem;
   }
 
+  .publication-institution {
+    font-size: 1.02rem;
+  }
+
   .publication-conference {
-    font-size: 1rem;
+    font-size: 1.28rem;
   }
   
   .button {
