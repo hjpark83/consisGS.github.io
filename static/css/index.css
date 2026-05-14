@@ -171,7 +171,7 @@ body {
 .publication-conference {
     display: inline-flex;
     align-items: center;
-    background: linear-gradient(90deg, #d62839 0%, #ef5b68 34%, #3558c8 72%, #1f4aa8 100%);
+    background: linear-gradient(90deg, #d62839 0%, #1f3f8f 100%);
     color: #d62839;
     font-size: 1.5rem;
     font-weight: 800;
