@@ -95,6 +95,16 @@
   
   <!-- Fonts - Optimized loading -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
   
   <!-- Defer non-critical JavaScript -->
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -214,13 +224,17 @@
   </div>
 
   <main id="main-content">
-  <section class="hero">
+  <section class="hero publication-hero">
+    <div class="publication-hero-background" aria-hidden="true"></div>
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
             <h1 class="title is-1 publication-title">Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement</h1>
+            <p class="publication-takeaway">
+              Refining fragmented SAM masks into view-consistent object identities for 3D Gaussian Splatting.
+            </p>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
@@ -240,7 +254,7 @@
                     <div class="publication-links">
                          <!-- TODO: Update with your arXiv paper ID -->
                       <span class="link-block">
-                        <a href="static/pdfs/sample.pdf" target="_blank"
+                        <a href="static/pdfs/paper.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -248,10 +262,20 @@
                         <span>Paper</span>
                       </a>
                     </span>
+                               <!-- TODO: Update with your arXiv paper ID -->
+                    <span class="link-block">
+                      <a href="https://arxiv.org/abs/2607.01708" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
 
                     <!-- TODO: Add your supplementary material PDF or remove this section -->
                     <!-- <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      <a href="static/pdfs/supple.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
@@ -270,17 +294,6 @@
                     <span>Code</span>
                   </a>
                 </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
-                <!-- <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a> -->
-              </span>
             </div>
 
             <div class="qualitative-slider comparison-slider hero-preview-slider" data-autoplay-ms="10000">
@@ -437,6 +450,40 @@
           Consequently, the model outputs a view-consistent object-level feature field for high-fidelity 3D scene understanding.
         </p>
 
+        <h3 class="title is-4 has-text-centered contribution-subtitle">Composite Merge Score</h3>
+        <div class="mcm-block">
+          <p class="mcm-summary">
+            Multi-Cue Mask refinement (MCM) computes a composite merge score between neighboring masks which are fragmented in the same object by jointly considering semantic similarity, geometric consistency, and boundary evidence.
+            Masks are merged when these cues consistently indicate that they belong to the same object, while strong boundary responses or cross-cue disagreement
+            prevent incorrect merging and preserve object separation.
+          </p>
+
+          <div class="mcm-equation">
+            \[
+            S(i, j)
+            =
+            w_{\mathrm{sem}}\cdot \mathrm{cos}(f_i, f_j)
+            +
+            w_{\mathrm{depth}}\cdot \mathrm{exp}{(-{|\bar{d}_i - \bar{d}_j|^2} / 2\sigma_d^2)} \\\space\\
+            -
+            w_{\mathrm{dbound}}\cdot \mathrm{max}(\nabla_D \cap \partial m_{ij})
+            -
+            w_{\mathrm{edge}}\cdot \mathrm{max}(\nabla_{\mathrm{edge}} \cap \partial m_{ij})
+            \]
+          </div>
+
+          <div class="mcm-decision-block">
+            <p class="mcm-decision-copy">
+              <strong>When masks are merged.</strong>
+              Two neighboring masks are merged when they likely belong to the same object, namely when their semantic features are similar, their mean depths are consistent, and no strong depth or edge boundary is observed along their shared contour.
+            </p>
+            <p class="mcm-decision-copy">
+              <strong>How the merge decision is made.</strong>
+              The semantic and depth terms increase \(S(i,j)\), while the depth-boundary and edge terms decrease it. Therefore, fragments are merged only when the positive affinity terms dominate the boundary penalties, and they remain separated when strong contour or depth discontinuity evidence indicates different objects.
+            </p>
+          </div>
+        </div>
+        
         <h3 class="title is-4 has-text-centered contribution-subtitle">Contributions</h3>
         <div class="contribution-block">
           <ul class="contribution-list">
@@ -516,14 +563,14 @@
         </button>
       </div>
       <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
-    </div>
-</section>
+        title={Your Paper Title Here},
+        author={First Author and Second Author and Third Author},
+        journal={Conference/Journal Name},
+        year={2024},
+        url={https://your-domain.com/your-project-page}
+      }</code></pre>
+          </div>
+      </section>
 <!--End BibTex citation -->
 
 
