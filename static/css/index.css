@@ -94,8 +94,7 @@ body {
 }
 
 .publication-hero {
-  background:
-    linear-gradient(180deg, #fdfefe 0%, #f8fafc 58%, #f5f7fb 100%);
+  background: #ffffff;
 }
 
 .publication-hero-background {
@@ -103,18 +102,7 @@ body {
   inset: 0;
   overflow: hidden;
   pointer-events: none;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(214, 40, 57, 0.22) 0%,
-      rgba(214, 40, 57, 0.16) 18%,
-      rgba(255, 255, 255, 0.14) 40%,
-      rgba(255, 255, 255, 0.1) 56%,
-      rgba(31, 63, 143, 0.16) 76%,
-      rgba(31, 63, 143, 0.12) 90%,
-      rgba(31, 63, 143, 0.08) 100%
-    );
-  opacity: 0.95;
+  background: transparent;
 }
 
 .hero.is-light {
