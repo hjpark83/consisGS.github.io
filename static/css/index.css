@@ -616,13 +616,6 @@ body {
   color: var(--text-primary);
 }
 
-.poster-placeholder {
-  margin-top: 2rem;
-  margin-bottom: 1rem !important;
-  color: var(--text-light);
-  font-style: italic;
-}
-
 /* Content Improvements */
 .content.has-text-justified {
   font-size: 1.1rem;
