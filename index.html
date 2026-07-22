@@ -406,6 +406,29 @@
                   </div>
                   <p class="comparison-caption">Comparison between the ground-truth annotation, the initial SAM mask, and our refined mask on the Table scene. While the initial SAM mask tends to produce unstable boundaries and fragmented parts for neighboring objects, our method refines them into clearer object-level segments with improved consistency.</p>
                 </article>
+
+                <article class="comparison-slide" data-dataset="Snacks">
+                  <span class="comparison-dataset">Table</span>
+                  <div class="comparison-grid">
+                    <figure class="comparison-panel">
+                      <img src="asset/slide/snacks/00019_gt.png" alt="Snacks ground truth" loading="lazy"/>
+                      <figcaption>GT</figcaption>
+                    </figure>
+                    <figure class="comparison-panel">
+                      <img src="asset/slide/snacks/00019_init.png" alt="Snacks SAM initial mask" loading="lazy"/>
+                      <figcaption>SAM Initial Mask</figcaption>
+                    </figure>
+                    <figure class="comparison-panel">
+                      <img src="asset/slide/table/00019_refined.png" alt="Snacks refined mask" loading="lazy"/>
+                      <figcaption>Refined Mask</figcaption>
+                    </figure>
+                  </div>
+                  <p class="comparison-caption">
+                    Comparison between the ground-truth annotation, the initial SAM mask, and our refined mask on the Snacks scene.
+                    While the initial SAM mask over-segments fine-grained patterns such as buttons on the calculator or pocky on the snack box, 
+                    our method successfully merge those fragments and recognizes them as part of a single coherent object.
+                  </p>
+
               </div>
               <div class="comparison-slider-dots" aria-label="Qualitative comparison slides"></div>
             </div>
