@@ -326,7 +326,7 @@
                   </div>
                   <p class="comparison-caption">
                     Comparison between the ground-truth annotation, the initial SAM mask, and our refined mask on the Figurines scene. 
-                    In this cluttered tabletop scene with many small objects, the initial SAM mask often produces fragmented or overly fine-grained predictions, whereas our method yields cleaner object-level masks with more consistent identities.</p>
+                    In this cluttered roomtop scene with many small objects, the initial SAM mask often produces fragmented or overly fine-grained predictions, whereas our method yields cleaner object-level masks with more consistent identities.</p>
                 </article>
                 
                 <article class="comparison-slide" data-dataset="Ramen">
@@ -345,7 +345,7 @@
                       <figcaption>Refined Mask</figcaption>
                     </figure>
                   </div>
-                  <p class="comparison-caption">Comparison between the ground-truth annotation, the initial SAM mask, and our refined mask on the Ramen scene. While the initial SAM mask over-segments fine-grained texture patterns such as those on the table, our method suppresses these spurious fragments and recognizes them as part of a single coherent object.</p>
+                  <p class="comparison-caption">Comparison between the ground-truth annotation, the initial SAM mask, and our refined mask on the Ramen scene. While the initial SAM mask over-segments fine-grained texture patterns such as those on the room, our method suppresses these spurious fragments and recognizes them as part of a single coherent object.</p>
                 </article>
 
                 <article class="comparison-slide" data-dataset="Blue Sofa">
@@ -388,23 +388,23 @@
                   When looking at the sheep and bear dolls, over-segmented masks are merged into object-level units.</p>
                 </article>
 
-                <article class="comparison-slide" data-dataset="Table">
-                  <span class="comparison-dataset">Table</span>
+                <article class="comparison-slide" data-dataset="room">
+                  <span class="comparison-dataset">Room</span>
                   <div class="comparison-grid">
                     <figure class="comparison-panel">
-                      <img src="asset/slide/table/00007_gt.png" alt="Table ground truth" loading="lazy"/>
+                      <img src="asset/slide/room/00007_gt.png" alt="room ground truth" loading="lazy"/>
                       <figcaption>GT</figcaption>
                     </figure>
                     <figure class="comparison-panel">
-                      <img src="asset/slide/table/00007_init.png" alt="Table SAM initial mask" loading="lazy"/>
+                      <img src="asset/slide/room/00007_init.png" alt="room SAM initial mask" loading="lazy"/>
                       <figcaption>SAM Initial Mask</figcaption>
                     </figure>
                     <figure class="comparison-panel">
-                      <img src="asset/slide/table/00007_refined.png" alt="Table refined mask" loading="lazy"/>
+                      <img src="asset/slide/room/00007_refined.png" alt="room refined mask" loading="lazy"/>
                       <figcaption>Refined Mask</figcaption>
                     </figure>
                   </div>
-                  <p class="comparison-caption">Comparison between the ground-truth annotation, the initial SAM mask, and our refined mask on the Table scene. While the initial SAM mask tends to produce unstable boundaries and fragmented parts for neighboring objects, our method refines them into clearer object-level segments with improved consistency.</p>
+                  <p class="comparison-caption">Comparison between the ground-truth annotation, the initial SAM mask, and our refined mask on the room scene. While the initial SAM mask tends to produce unsroom boundaries and fragmented parts for neighboring objects, our method refines them into clearer object-level segments with improved consistency.</p>
                 </article>
 
                 <article class="comparison-slide" data-dataset="Snacks">
@@ -478,7 +478,7 @@
             (1) Multi-Cue Extraction that generates synergistic semantic, geometric, and structural priors from input images. 
             (2) Multi-Cue-Guided Mask Merging process that consolidates fragmented masks using a composite merge score derived from semantic, depth, and edge cues. 
             (3) Cross-View Mask Matching that establishes globally consistent identity assignments across all viewpoints. 
-            By transforming viewpoint-specific segments into coherent 3D primitives, our approach enables stable 3D instance segmentation and effective downstream editing tasks. 
+            By transforming viewpoint-specific segments into coherent 3D primitives, our approach enables sroom 3D instance segmentation and effective downstream editing tasks. 
             Experiments demonstrate that our method significantly improves cross-view consistency and segmentation stability over existing baselines while maintaining high-fidelity photometric reconstruction.
         </div>
       </div>
