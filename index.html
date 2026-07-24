@@ -452,6 +452,29 @@
                   </p>
                 </article>
 
+                <article class="comparison-slide" data-dataset="Sedan">
+                  <span class="comparison-dataset">Sedan</span>
+                  <div class="comparison-grid">
+                    <figure class="comparison-panel">
+                      <img src="asset/slide/sedan/00070_gt.png" alt="Sedan ground truth" loading="lazy"/>
+                      <figcaption>GT</figcaption>
+                    </figure>
+                    <figure class="comparison-panel">
+                      <img src="asset/slide/sedan/00070_init.png" alt="Sedan SAM initial mask" loading="lazy"/>
+                      <figcaption>SAM Initial Mask</figcaption>
+                    </figure>
+                    <figure class="comparison-panel">
+                      <img src="asset/slide/sedan/00070_refined.png" alt="Sedan refined mask" loading="lazy"/>
+                      <figcaption>Refined Mask</figcaption>
+                    </figure>
+                  </div>
+                  <p class="comparison-caption">
+                    Comparison between the ground-truth annotation, the initial SAM mask, and our refined mask on the Sedan scene.
+                    In this cluttered scene with many adjacent objects, the initial SAM mask tends to generate fragmented or inconsistent object parts, 
+                    whereas our method consolidates them into cleaner object-level masks with improved structural consistency.
+                  </p>
+                </article>
+
               </div>
               <div class="comparison-slider-dots" aria-label="Qualitative comparison slides"></div>
             </div>
