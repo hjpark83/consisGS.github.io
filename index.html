@@ -159,6 +159,8 @@
 </head>
 <body>
 
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress" id="reading-progress"></div>
 
   <!-- Scroll to Top Button -->
   <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
@@ -194,7 +196,7 @@
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement</h1>
             <p class="publication-takeaway">
-              Refining fragmented SAM masks into view-consistent object identities for 3D Gaussian Splatting.
+              Refining fragmented SAM masks into <span class="hero-highlight">view-consistent object identities</span> for 3D Gaussian Splatting.
             </p>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
@@ -458,15 +460,15 @@
         </div>
 
         <div class="overview-highlights">
-          <span class="overview-chip">
+          <span class="overview-chip reveal">
             <span class="overview-chip-icon contribution-icon--red"><i class="fas fa-layer-group"></i></span>
             Multi-Cue Mask Refinement
           </span>
-          <span class="overview-chip">
+          <span class="overview-chip reveal">
             <span class="overview-chip-icon contribution-icon--violet"><i class="fas fa-video"></i></span>
             Cross-View Consistency
           </span>
-          <span class="overview-chip">
+          <span class="overview-chip reveal">
             <span class="overview-chip-icon contribution-icon--blue"><i class="fas fa-cubes"></i></span>
             View-Consistent 3D Gaussians
           </span>
@@ -486,7 +488,7 @@
         <div class="section-kicker"><span class="section-kicker-num">02</span></div>
         <h2 class="title is-3 has-text-centered">Method</h2>
 
-        <div class="figure-card">
+        <div class="figure-card reveal">
           <figure class="image">
             <img src="asset/pipeline.png" alt="Pipeline overview" loading="lazy" class="lightbox-trigger"/>
           </figure>
@@ -496,22 +498,22 @@
         </div>
 
         <ol class="pipeline-steps">
-          <li class="pipeline-step">
+          <li class="pipeline-step reveal">
             <span class="pipeline-step-num">1</span>
             <h4>Multi-Cue Extraction</h4>
             <p>Generates synergistic semantic, geometric, and structural priors from each input view.</p>
           </li>
-          <li class="pipeline-step">
+          <li class="pipeline-step reveal">
             <span class="pipeline-step-num">2</span>
             <h4>Multi-Cue-Guided Mask Merging</h4>
             <p>Consolidates fragmented SAM masks with a composite score derived from semantic, depth, and edge cues.</p>
           </li>
-          <li class="pipeline-step">
+          <li class="pipeline-step reveal">
             <span class="pipeline-step-num">3</span>
             <h4>Cross-View Mask Matching</h4>
             <p>Establishes globally consistent object identities across all viewpoints.</p>
           </li>
-          <li class="pipeline-step">
+          <li class="pipeline-step reveal">
             <span class="pipeline-step-num">4</span>
             <h4>Feature Lifting</h4>
             <p>Backprojects refined 2D identities into a view-consistent, object-level 3D Gaussian feature field.</p>
@@ -530,7 +532,7 @@
             =
             w_{\mathrm{sem}}\cdot \mathrm{cos}(f_i, f_j)
             +
-            w_{\mathrm{depth}}\cdot \mathrm{exp}{(-{|\bar{d}_i - \bar{d}_j|^2} / 2\sigma_d^2)} \\\space\\
+            w_{\mathrm{depth}}\cdot \mathrm{exp}{(-{|\bar{d}_i - \bar{d}_j|^2} / 2\sigma_d^2)}
             -
             w_{\mathrm{dbound}}\cdot \mathrm{max}(\nabla_D \cap \partial m_{ij})
             -
@@ -547,7 +549,7 @@
 
         <div class="merge-dial-eyebrow"><i class="fas fa-hand-pointer"></i> Interactive Demo</div>
         <h3 class="title is-4 has-text-centered merge-dial-title">Watch It Refine</h3>
-        <div class="merge-dial">
+        <div class="merge-dial reveal">
           <div class="merge-dial-tabs">
             <button type="button" class="merge-dial-tab is-active" data-scene="figurines">Figurines</button>
             <button type="button" class="merge-dial-tab" data-scene="ramen">Ramen</button>
@@ -573,22 +575,22 @@
 
         <h3 class="title is-4 has-text-centered contribution-subtitle">Contributions</h3>
         <div class="contribution-grid">
-          <div class="contribution-card">
+          <div class="contribution-card reveal">
             <span class="contribution-icon contribution-icon--red"><i class="fas fa-layer-group"></i></span>
             <h4>Multi-Cue Mask Refinement</h4>
             <p>A framework that reduces SAM's over-segmentation using multiple cues.</p>
           </div>
-          <div class="contribution-card">
+          <div class="contribution-card reveal">
             <span class="contribution-icon contribution-icon--violet"><i class="fas fa-video"></i></span>
             <h4>Cross-View Matching</h4>
             <p>Establishes globally consistent object IDs across all viewpoints.</p>
           </div>
-          <div class="contribution-card">
+          <div class="contribution-card reveal">
             <span class="contribution-icon contribution-icon--blue"><i class="fas fa-cubes"></i></span>
             <h4>Feature Lifting</h4>
             <p>Transfers 2D identities to 3D Gaussians, filtering unreliable assignments via majority voting.</p>
           </div>
-          <div class="contribution-card">
+          <div class="contribution-card reveal">
             <span class="contribution-icon contribution-icon--sky"><i class="fas fa-chart-line"></i></span>
             <h4>Extensive Evaluation</h4>
             <p>Large gains in object assignment accuracy on LERF, Replica, and real-world scenes.</p>
@@ -610,7 +612,7 @@
         <h2 class="title is-3 has-text-centered">Results</h2>
 
         <h3 class="title is-4 has-text-centered result-subtitle">Qualitative Result</h3>
-        <div class="figure-card">
+        <div class="figure-card reveal">
           <figure class="image">
             <img src="asset/Qualitative_results.png" alt="Qualitative results" loading="lazy" class="lightbox-trigger"/>
           </figure>
@@ -623,7 +625,7 @@
         </div>
 
         <h3 class="title is-4 has-text-centered result-subtitle">View Consistency</h3>
-        <div class="figure-card">
+        <div class="figure-card reveal">
           <figure class="image">
             <img src="asset/View_consistency.png" alt="View consistency results" loading="lazy" class="lightbox-trigger"/>
           </figure>
@@ -633,7 +635,7 @@
         </div>
 
         <h3 class="title is-4 has-text-centered result-subtitle">Quantitative Result</h3>
-        <div class="figure-card">
+        <div class="figure-card reveal">
           <p class="figure-card-caption quant-table-caption">Comparison on the LERF and Replica datasets.</p>
           <div class="quant-table-wrap">
             <table class="quant-table">
@@ -731,7 +733,7 @@
           </div>
           <p class="quant-table-note has-text-centered"><strong>Bold</strong> = best, <span class="quant-underline">underlined</span> = second-best.</p>
 
-          <div class="stat-band">
+          <div class="stat-band reveal">
             <div class="stat-tile">
               <div class="stat-value">0.728<span class="stat-unit">mIoU</span></div>
               <div class="stat-label">Best mask accuracy among all baselines</div>

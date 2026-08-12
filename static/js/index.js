@@ -320,6 +320,50 @@ function setupLightbox() {
     });
 }
 
+// Fade-up reveal for content blocks as they scroll into view
+function setupScrollReveal() {
+    const items = Array.from(document.querySelectorAll('.reveal'));
+    if (items.length === 0) return;
+
+    const groupCounts = new Map();
+    items.forEach((el) => {
+        const parent = el.parentElement;
+        const index = groupCounts.get(parent) || 0;
+        el.style.transitionDelay = `${Math.min(index, 6) * 80}ms`;
+        groupCounts.set(parent, index + 1);
+    });
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.15, rootMargin: '0px 0px -60px 0px' }
+    );
+
+    items.forEach((el) => observer.observe(el));
+}
+
+// Top reading progress bar
+function setupReadingProgress() {
+    const bar = document.getElementById('reading-progress');
+    if (!bar) return;
+
+    function update() {
+        const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = scrollableHeight > 0 ? (window.scrollY / scrollableHeight) * 100 : 0;
+        bar.style.width = pct + '%';
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+}
+
 $(document).ready(function() {
     // Check for click events on the navbar burger icon
 
@@ -351,5 +395,11 @@ $(document).ready(function() {
 
     // Setup image lightbox
     setupLightbox();
+
+    // Setup scroll-reveal animations
+    setupScrollReveal();
+
+    // Setup reading progress bar
+    setupReadingProgress();
 
 })
