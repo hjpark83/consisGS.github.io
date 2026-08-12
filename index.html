@@ -5,27 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
   <meta name="title" content="Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement">
   <meta name="description" content="We refine fragmented SAM masks with semantic, depth, and edge cues and match them across views to produce consistent object-level features for 3D Gaussian Splatting.">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="Computer Vision, 3D Vision, Video Generation, 3D Gaussian Splatting">
-  <!-- TODO: List all authors -->
+  <meta name="keywords" content="3D Gaussian Splatting, Instance Segmentation, View Consistency, Multi-Cue Mask Refinement, Computer Vision, 3D Vision">
   <meta name="author" content="Hyunjoon Park, Donghyeon Cho">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
   <meta property="og:site_name" content="Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement">
-  <!-- TODO: Same as paper title above -->
   <meta property="og:title" content="Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement">
-  <!-- TODO: Same as description above -->
   <meta property="og:description" content="We refine fragmented SAM masks with semantic, depth, and edge cues and match them across views to produce consistent object-level features for 3D Gaussian Splatting.">
   <meta property="og:url" content="https://hjpark83.github.io/consisGS.github.io/">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="./asset/pipeline.png">
+  <meta property="og:image" content="https://hjpark83.github.io/consisGS.github.io/asset/pipeline.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement">
@@ -35,17 +28,11 @@
   <meta property="article:tag" content="3D Gaussian Splatting">
 
   <!-- Twitter -->
-  <!-- <meta name="twitter:card" content="summary_large_image"> -->
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <!-- <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE"> -->
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <!-- <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE"> -->
-  <!-- TODO: Same as paper title above -->
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement">
   <meta name="twitter:description" content="We refine fragmented SAM masks with semantic, depth, and edge cues and match them across views to produce consistent object-level features for 3D Gaussian Splatting.">
-  <!-- TODO: Same as social preview image above -->
-  <!-- <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png"> -->
-  <!-- <meta name="twitter:image:alt" content="Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement - Research Preview"> -->
+  <meta name="twitter:image" content="https://hjpark83.github.io/consisGS.github.io/asset/pipeline.png">
+  <meta name="twitter:image:alt" content="Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement - Research Preview">
 
   <!-- Academic/Research Specific -->
   <meta name="citation_title" content="Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement">
@@ -68,12 +55,12 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
 
-  <!-- TODO: Replace with your paper title and authors -->
   <title>Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement</title>
-  
+
   <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/svg+xml" href="static/images/favicon.svg">
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/apple-touch-icon.png">
   
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -178,50 +165,25 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Papers">
-      <i class="fas fa-flask"></i>
-      More Papers
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Papers</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 1</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!--
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        -->
-      </div>
-    </div>
-  </div>
+  <!-- Section Navigator -->
+  <nav class="section-nav" aria-label="Section navigation">
+    <a href="#overview" class="section-nav-link" data-section="overview">
+      <span class="section-nav-dot"></span>
+      <span class="section-nav-label">Overview</span>
+    </a>
+    <a href="#method" class="section-nav-link" data-section="method">
+      <span class="section-nav-dot"></span>
+      <span class="section-nav-label">Method</span>
+    </a>
+    <a href="#results" class="section-nav-link" data-section="results">
+      <span class="section-nav-dot"></span>
+      <span class="section-nav-label">Results</span>
+    </a>
+    <a href="#BibTeX" class="section-nav-link" data-section="BibTeX">
+      <span class="section-nav-dot"></span>
+      <span class="section-nav-label">BibTeX</span>
+    </a>
+  </nav>
 
   <main id="main-content">
   <section class="hero publication-hero">
@@ -230,13 +192,11 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
             <h1 class="title is-1 publication-title">Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement</h1>
             <p class="publication-takeaway">
               Refining fragmented SAM masks into view-consistent object identities for 3D Gaussian Splatting.
             </p>
             <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
                 <a href="https://hjpark83.github.io/" target="_blank">Hyunjoon Park</a>,</span>
                 <span class="author-block"><a href="https://scholar.google.com/citations?user=zj-NER4AAAAJ&hl=en" target="_blank">Donghyeon Cho</a><sup>*</sup></span>
@@ -252,7 +212,6 @@
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
                       <span class="link-block">
                         <a href="static/pdfs/paper.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
@@ -262,7 +221,16 @@
                         <span>Paper</span>
                       </a>
                     </span>
-                               <!-- TODO: Update with your arXiv paper ID -->
+                    <span class="link-block">
+                      <a href="static/pdfs/supple.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span>
+
                     <span class="link-block">
                       <a href="https://arxiv.org/abs/2607.01708" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
@@ -273,18 +241,6 @@
                     </a>
                   </span>
 
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <!-- <span class="link-block">
-                      <a href="static/pdfs/supple.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span> -->
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
                     <a href="https://github.com/hjpark83/Consistent-Scene-Understanding-in-3DGS-via-MCM" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
@@ -404,7 +360,7 @@
                       <figcaption>Refined Mask</figcaption>
                     </figure>
                   </div>
-                  <p class="comparison-caption">Comparison between the ground-truth annotation, the initial SAM mask, and our refined mask on the room scene. While the initial SAM mask tends to produce unsroom boundaries and fragmented parts for neighboring objects, our method refines them into clearer object-level segments with improved consistency.</p>
+                  <p class="comparison-caption">Comparison between the ground-truth annotation, the initial SAM mask, and our refined mask on the room scene. While the initial SAM mask tends to produce unclean boundaries and fragmented parts for neighboring objects, our method refines them into clearer object-level segments with improved consistency.</p>
                 </article>
 
                 <article class="comparison-slide" data-dataset="Snacks">
@@ -487,22 +443,33 @@
 
 
 <!-- Paper abstract -->
-<section class="section hero is-light">
+<section class="section hero is-light" id="overview">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <div class="section-kicker"><span class="section-kicker-num">01</span></div>
+        <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
           <p>
-            Reliable instance-level scene understanding is a fundamental prerequisite for object-level interactions and high-fidelity 3D representations. 
-            While current methods often leverage 2D foundation segmentation models to obtain these priors, their 2D-centric design typically yields fragmented masks and inconsistent predictions across different views. 
-            To address these issues, we propose a novel framework that produces consistent 2D instance masks to guide the optimization of 3D Gaussian Splatting (3DGS) feature fields. Our framework consists of three main stages.
-            (1) Multi-Cue Extraction that generates synergistic semantic, geometric, and structural priors from input images. 
-            (2) Multi-Cue-Guided Mask Merging process that consolidates fragmented masks using a composite merge score derived from semantic, depth, and edge cues. 
-            (3) Cross-View Mask Matching that establishes globally consistent identity assignments across all viewpoints. 
-            By transforming viewpoint-specific segments into coherent 3D primitives, our approach enables sroom 3D instance segmentation and effective downstream editing tasks. 
-            Experiments demonstrate that our method significantly improves cross-view consistency and segmentation stability over existing baselines while maintaining high-fidelity photometric reconstruction.
+            2D foundation models like SAM often produce fragmented, view-inconsistent masks, limiting object-level 3D understanding.
+            We refine these masks with semantic, depth, and edge cues, match identities across views, and lift them into a consistent 3D Gaussian feature field.
+            Our method significantly improves cross-view consistency and segmentation quality over existing baselines, while preserving high-fidelity reconstruction.
+          </p>
+        </div>
+
+        <div class="overview-highlights">
+          <span class="overview-chip">
+            <span class="overview-chip-icon contribution-icon--red"><i class="fas fa-layer-group"></i></span>
+            Multi-Cue Mask Refinement
+          </span>
+          <span class="overview-chip">
+            <span class="overview-chip-icon contribution-icon--violet"><i class="fas fa-video"></i></span>
+            Cross-View Consistency
+          </span>
+          <span class="overview-chip">
+            <span class="overview-chip-icon contribution-icon--blue"><i class="fas fa-cubes"></i></span>
+            View-Consistent 3D Gaussians
+          </span>
         </div>
       </div>
     </div>
@@ -512,28 +479,49 @@
 
 
 <!-- Method -->
-<section class="section">
+<section class="section" id="method">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full">
+        <div class="section-kicker"><span class="section-kicker-num">02</span></div>
         <h2 class="title is-3 has-text-centered">Method</h2>
 
-        <figure class="image mb-6">
-          <img src="asset/pipeline.png" alt="Pipeline overview" loading="lazy"/>
-        </figure>
-        <p class="subtitle">
-          Given multiview images, we extract initial SAM masks and multi-cue priors. 
-          These masks are refined via MCM using a composite merge score. 
-          Following cross-view mask matching, refined 2D features are backprojected and lifted into 3D Gaussians. 
-          Consequently, the model outputs a view-consistent object-level feature field for high-fidelity 3D scene understanding.
-        </p>
+        <div class="figure-card">
+          <figure class="image">
+            <img src="asset/pipeline.png" alt="Pipeline overview" loading="lazy" class="lightbox-trigger"/>
+          </figure>
+          <p class="figure-card-caption">
+            From multiview images, MCM refines SAM masks with multi-cue evidence, matches identities across views, and lifts them into a view-consistent, object-level 3D Gaussian feature field.
+          </p>
+        </div>
+
+        <ol class="pipeline-steps">
+          <li class="pipeline-step">
+            <span class="pipeline-step-num">1</span>
+            <h4>Multi-Cue Extraction</h4>
+            <p>Generates synergistic semantic, geometric, and structural priors from each input view.</p>
+          </li>
+          <li class="pipeline-step">
+            <span class="pipeline-step-num">2</span>
+            <h4>Multi-Cue-Guided Mask Merging</h4>
+            <p>Consolidates fragmented SAM masks with a composite score derived from semantic, depth, and edge cues.</p>
+          </li>
+          <li class="pipeline-step">
+            <span class="pipeline-step-num">3</span>
+            <h4>Cross-View Mask Matching</h4>
+            <p>Establishes globally consistent object identities across all viewpoints.</p>
+          </li>
+          <li class="pipeline-step">
+            <span class="pipeline-step-num">4</span>
+            <h4>Feature Lifting</h4>
+            <p>Backprojects refined 2D identities into a view-consistent, object-level 3D Gaussian feature field.</p>
+          </li>
+        </ol>
 
         <h3 class="title is-4 has-text-centered contribution-subtitle">Composite Merge Score</h3>
         <div class="mcm-block">
           <p class="mcm-summary">
-            Multi-Cue Mask refinement (MCM) computes a composite merge score between neighboring masks which are fragmented in the same object by jointly considering semantic similarity, geometric consistency, and boundary evidence.
-            Masks are merged when these cues consistently indicate that they belong to the same object, while strong boundary responses or cross-cue disagreement
-            prevent incorrect merging and preserve object separation.
+            MCM scores neighboring mask pairs by semantic, depth, and edge agreement, merging fragments of the same object while strong boundary evidence keeps distinct objects apart.
           </p>
 
           <div class="mcm-equation">
@@ -552,24 +540,59 @@
 
           <div class="mcm-decision-block">
             <p class="mcm-decision-copy">
-              <strong>When masks are merged.</strong>
-              Two neighboring masks are merged when they likely belong to the same object, namely when their semantic features are similar, their mean depths are consistent, and no strong depth or edge boundary is observed along their shared contour.
-            </p>
-            <p class="mcm-decision-copy">
-              <strong>How the merge decision is made.</strong>
-              The semantic and depth terms increase \(S(i,j)\), while the depth-boundary and edge terms decrease it. Therefore, fragments are merged only when the positive affinity terms dominate the boundary penalties, and they remain separated when strong contour or depth discontinuity evidence indicates different objects.
+              Semantic and depth agreement push \(S(i,j)\) up; boundary evidence pulls it down — masks merge only when appearance and geometry agree, and stay separated across real object edges.
             </p>
           </div>
         </div>
-        
+
+        <div class="merge-dial-eyebrow"><i class="fas fa-hand-pointer"></i> Interactive Demo</div>
+        <h3 class="title is-4 has-text-centered merge-dial-title">Watch It Refine</h3>
+        <div class="merge-dial">
+          <div class="merge-dial-tabs">
+            <button type="button" class="merge-dial-tab is-active" data-scene="figurines">Figurines</button>
+            <button type="button" class="merge-dial-tab" data-scene="ramen">Ramen</button>
+            <button type="button" class="merge-dial-tab" data-scene="blue_sofa">Blue Sofa</button>
+            <button type="button" class="merge-dial-tab" data-scene="teatime">Teatime</button>
+            <button type="button" class="merge-dial-tab" data-scene="room">Room</button>
+            <button type="button" class="merge-dial-tab" data-scene="snacks">Snacks</button>
+            <button type="button" class="merge-dial-tab" data-scene="covered_desk">Covered Desk</button>
+          </div>
+
+          <div class="merge-dial-image-wrap">
+            <img class="merge-dial-frame is-active" data-index="0" src="asset/slide/figurines/00005_gt.png" alt="Figurines ground truth" draggable="false"/>
+            <img class="merge-dial-frame" data-index="1" src="asset/slide/figurines/00005_init.png" alt="Figurines SAM initial mask" draggable="false"/>
+            <img class="merge-dial-frame" data-index="2" src="asset/slide/figurines/00005_refined.png" alt="Figurines refined mask" draggable="false"/>
+          </div>
+
+          <div class="merge-dial-labels">
+            <span class="merge-dial-label is-active" data-index="0">GT</span>
+            <span class="merge-dial-label" data-index="1">SAM Initial Mask</span>
+            <span class="merge-dial-label" data-index="2">Refined Mask</span>
+          </div>
+        </div>
+
         <h3 class="title is-4 has-text-centered contribution-subtitle">Contributions</h3>
-        <div class="contribution-block">
-          <ul class="contribution-list">
-            <li>Multi-Cue Mask Refinement framework that mitigates SAM-induced oversegmentation based on multiple cues.</li>
-            <li>Cross-view mask matching that establishes globally consistent object IDs and suppresses view-dependent label inconsistencies across all viewpoints.</li>
-            <li>Feature lifting that transfers 2D identities to 3D Gaussians while filtering unreliable assignments through majority voting and variance analysis.</li>
-            <li>Extensive evaluation on LERF, Replica and several real-world scenes, demonstrating substantial gains in correct object assignment and a significant reduction in over-segmented object counts.</li>
-          </ul>
+        <div class="contribution-grid">
+          <div class="contribution-card">
+            <span class="contribution-icon contribution-icon--red"><i class="fas fa-layer-group"></i></span>
+            <h4>Multi-Cue Mask Refinement</h4>
+            <p>A framework that reduces SAM's over-segmentation using multiple cues.</p>
+          </div>
+          <div class="contribution-card">
+            <span class="contribution-icon contribution-icon--violet"><i class="fas fa-video"></i></span>
+            <h4>Cross-View Matching</h4>
+            <p>Establishes globally consistent object IDs across all viewpoints.</p>
+          </div>
+          <div class="contribution-card">
+            <span class="contribution-icon contribution-icon--blue"><i class="fas fa-cubes"></i></span>
+            <h4>Feature Lifting</h4>
+            <p>Transfers 2D identities to 3D Gaussians, filtering unreliable assignments via majority voting.</p>
+          </div>
+          <div class="contribution-card">
+            <span class="contribution-icon contribution-icon--sky"><i class="fas fa-chart-line"></i></span>
+            <h4>Extensive Evaluation</h4>
+            <p>Large gains in object assignment accuracy on LERF, Replica, and real-world scenes.</p>
+          </div>
         </div>
 
       </div>
@@ -579,33 +602,154 @@
 <!-- End method -->
 
 <!-- Results -->
-<section class="section hero is-light">
+<section class="section hero is-light" id="results">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full">
+        <div class="section-kicker"><span class="section-kicker-num">03</span></div>
         <h2 class="title is-3 has-text-centered">Results</h2>
 
         <h3 class="title is-4 has-text-centered result-subtitle">Qualitative Result</h3>
-        <figure class="image mb-6">
-          <img src="asset/Qualitative_results.png" alt="Qualitative results" loading="lazy"/>
-        </figure>
-        <p class="subtitle">
-          This figure demonstrates how faithfully our refinement results represent the scene and maintain 
-          view consistency across different viewpoints. We compare our model's performance with three baselines.
-        </p>
-        <p class="qualitative-note has-text-centered">
-          * For clearer visualization, this figure enhances edge visibility and overlays object IDs on the masks.
-        </p>
+        <div class="figure-card">
+          <figure class="image">
+            <img src="asset/Qualitative_results.png" alt="Qualitative results" loading="lazy" class="lightbox-trigger"/>
+          </figure>
+          <p class="figure-card-caption">
+            Our refinement stays faithful to the scene and consistent across viewpoints, shown here against three baselines.
+          </p>
+          <p class="qualitative-note has-text-centered">
+            * For clearer visualization, this figure enhances edge visibility and overlays object IDs on the masks.
+          </p>
+        </div>
 
         <h3 class="title is-4 has-text-centered result-subtitle">View Consistency</h3>
-        <figure class="image mb-6">
-          <img src="asset/View_consistency.png" alt="View consistency results" loading="lazy"/>
-        </figure>
-        <p class="subtitle">
-          Compared to our baseline model (GaussianGrouping), 
-          which exhibits over-segmentation, unclear mask area, and view-inconsistent predictions, 
-          our approach successfully produces coherent, clear, and view-consistent object masks across changing viewpoints.
-        </p>
+        <div class="figure-card">
+          <figure class="image">
+            <img src="asset/View_consistency.png" alt="View consistency results" loading="lazy" class="lightbox-trigger"/>
+          </figure>
+          <p class="figure-card-caption">
+            Unlike the GaussianGrouping baseline, which over-segments and drifts across views, our masks stay clean and consistent as the viewpoint changes.
+          </p>
+        </div>
+
+        <h3 class="title is-4 has-text-centered result-subtitle">Quantitative Result</h3>
+        <div class="figure-card">
+          <p class="figure-card-caption quant-table-caption">Comparison on the LERF and Replica datasets.</p>
+          <div class="quant-table-wrap">
+            <table class="quant-table">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Model</th>
+                  <th>PSNR ↑</th>
+                  <th>SSIM ↑</th>
+                  <th>LPIPS ↓</th>
+                  <th>mIoU ↑</th>
+                  <th>mBIoU ↑</th>
+                  <th>#Mask ↓</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Standard</td>
+                  <td>3DGS</td>
+                  <td class="is-second">28.6</td>
+                  <td class="is-second">0.88</td>
+                  <td class="is-best">0.11</td>
+                  <td>–</td>
+                  <td>–</td>
+                  <td>–</td>
+                </tr>
+                <tr class="quant-table-group-start">
+                  <td rowspan="3">3D Segmentation</td>
+                  <td>Gau-Group</td>
+                  <td class="is-second">28.6</td>
+                  <td class="is-second">0.88</td>
+                  <td class="is-second">0.12</td>
+                  <td>0.685</td>
+                  <td>0.642</td>
+                  <td>9,627</td>
+                </tr>
+                <tr>
+                  <td>SAGA</td>
+                  <td>28.2</td>
+                  <td>0.87</td>
+                  <td>0.15</td>
+                  <td class="is-second">0.712</td>
+                  <td>0.658</td>
+                  <td>178</td>
+                </tr>
+                <tr>
+                  <td>InstanceGaussian</td>
+                  <td class="is-best">28.8</td>
+                  <td>0.87</td>
+                  <td>0.15</td>
+                  <td>0.702</td>
+                  <td class="is-second">0.662</td>
+                  <td>101</td>
+                </tr>
+                <tr class="quant-table-group-start">
+                  <td rowspan="3">Feature Field</td>
+                  <td>Feature3DGS</td>
+                  <td>27.5</td>
+                  <td>0.84</td>
+                  <td>0.18</td>
+                  <td>0.538</td>
+                  <td>0.485</td>
+                  <td>–</td>
+                </tr>
+                <tr>
+                  <td>GARField</td>
+                  <td>28.1</td>
+                  <td>0.87</td>
+                  <td>0.16</td>
+                  <td>0.710</td>
+                  <td>0.615</td>
+                  <td>–</td>
+                </tr>
+                <tr>
+                  <td>CF3</td>
+                  <td>28.3</td>
+                  <td>0.87</td>
+                  <td>0.14</td>
+                  <td>0.524</td>
+                  <td>0.582</td>
+                  <td>–</td>
+                </tr>
+                <tr class="quant-table-group-start quant-table-proposed">
+                  <td>Proposed</td>
+                  <td>Ours</td>
+                  <td class="is-second">28.6</td>
+                  <td class="is-best">0.89</td>
+                  <td>0.13</td>
+                  <td class="is-best">0.728</td>
+                  <td class="is-best">0.677</td>
+                  <td class="is-best">67</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="quant-table-note has-text-centered"><strong>Bold</strong> = best, <span class="quant-underline">underlined</span> = second-best.</p>
+
+          <div class="stat-band">
+            <div class="stat-tile">
+              <div class="stat-value">0.728<span class="stat-unit">mIoU</span></div>
+              <div class="stat-label">Best mask accuracy among all baselines</div>
+            </div>
+            <div class="stat-tile">
+              <div class="stat-value">0.677<span class="stat-unit">mBIoU</span></div>
+              <div class="stat-label">Best boundary-aware accuracy</div>
+            </div>
+            <div class="stat-tile">
+              <div class="stat-value">67<span class="stat-unit">masks</span></div>
+              <div class="stat-label">vs. 9,627 for Gaussian Grouping</div>
+            </div>
+            <div class="stat-tile">
+              <div class="stat-value">28.6<span class="stat-unit">dB PSNR</span></div>
+              <div class="stat-label">No loss in photometric quality</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -617,30 +761,48 @@
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
+      <div class="section-kicker"><span class="section-kicker-num">04</span></div>
+      <h2 class="title is-3 has-text-centered">BibTeX</h2>
+
+      <div class="bibtex-card">
         <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
           <i class="fas fa-copy"></i>
           <span class="copy-text">Copy</span>
         </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-        title={Your Paper Title Here},
-        author={First Author and Second Author and Third Author},
-        journal={Conference/Journal Name},
-        year={2024},
-        url={https://your-domain.com/your-project-page}
+        <pre id="bibtex-code"><code>@inproceedings{park2026consistent,
+        title={Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement},
+        author={Park, Hyunjoon and Cho, Donghyeon},
+        booktitle={International Conference on Pattern Recognition (ICPR)},
+        year={2026},
+        url={https://hjpark83.github.io/consisGS.github.io/}
       }</code></pre>
-          </div>
-      </section>
+      </div>
+    </div>
+  </section>
 <!--End BibTex citation -->
 
+  <!-- Image Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button type="button" class="lightbox-close" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt=""/>
+  </div>
 
   <footer class="footer">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
+
+          <div class="footer-contact">
+            <a href="https://www.linkedin.com/in/hyunjoon83/" target="_blank" class="icon-link" title="LinkedIn" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:hyunjoonpark0803@gmail.com" class="icon-link" title="Email" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
 
           <p>
             This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
