@@ -167,6 +167,33 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
+  <!-- More Works Dropdown -->
+  <div class="more-works-container">
+    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
+      <i class="fas fa-flask"></i>
+      More Works
+      <i class="fas fa-chevron-down dropdown-arrow"></i>
+    </button>
+    <div class="more-works-dropdown" id="moreWorksDropdown">
+      <div class="dropdown-header">
+        <h4>More Works from Our Lab</h4>
+        <button class="close-btn" onclick="toggleMoreWorks()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="works-list">
+        <a href="https://poohoh.github.io/BlueOut.github.io/" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>High-Resolution Artwork Outpainting with Global Blueprint Guidance and Layout Control</h5>
+            <p>A two-stage framework that expands artwork via low-resolution blueprint generation followed by parallel high-resolution patch synthesis.</p>
+            <span class="work-venue">ECCV 2026</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
   <!-- Section Navigator -->
   <nav class="section-nav" aria-label="Section navigation">
     <a href="#overview" class="section-nav-link" data-section="overview">
@@ -202,10 +229,6 @@
               <span class="author-block">
                 <a href="https://hjpark83.github.io/" target="_blank">Hyunjoon Park</a>,</span>
                 <span class="author-block"><a href="https://scholar.google.com/citations?user=zj-NER4AAAAJ&hl=en" target="_blank">Donghyeon Cho</a><sup>*</sup></span>
-                  </div>
-
-                  <div class="is-size-6 publication-affiliation">
-                    Hanyang University, Seoul, Republic of Korea
                   </div>
 
                   <div class="is-size-6 publication-affiliation">

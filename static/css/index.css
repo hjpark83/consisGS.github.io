@@ -26,6 +26,7 @@
 /* Smooth scrolling for better UX */
 html {
   scroll-behavior: smooth;
+  font-size: 110%;
 }
 
 body {
