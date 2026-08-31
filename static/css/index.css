@@ -1739,6 +1739,7 @@ code {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--text-primary);
+  font-family: 'Inter', sans-serif !important;
 }
 
 .close-btn {
@@ -1782,19 +1783,14 @@ code {
   font-size: 1rem;
   font-weight: 500;
   color: var(--text-primary);
-}
-
-.work-info p {
-  margin: 0 0 0.5rem 0;
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  line-height: 1.4;
+  font-family: 'Inter', sans-serif !important;
 }
 
 .work-venue {
   font-size: 0.8rem;
-  color: var(--text-light);
+  color: var(--text-primary);
   font-style: italic;
+  font-family: 'Inter', sans-serif !important;
 }
 
 .work-item .fas {
