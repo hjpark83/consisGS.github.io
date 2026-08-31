@@ -1788,7 +1788,8 @@ code {
 
 .work-venue {
   font-size: 0.8rem;
-  color: var(--text-primary);
+  color: #5b21b6;
+  font-weight: 600;
   font-style: italic;
   font-family: 'Inter', sans-serif !important;
 }
